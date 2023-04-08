@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+<!-- userStocks=userStocks, userCash=userCash, totalValue=totalValue-->
+<!-- which stocks the user owns,
+    the numbers of shares owned,
+    the current price of each stock,
+    and the total value of each holding-->
+{% block main %}
+<p>index page</p>
+<table class="table table-hover">
+    <thead class="table-primary" >
+        <th scope="col">Symbol</th>
+        <th scope="col">Name</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Total Value</th>
+    </thead>
+    <tbody>
+        {% for item in userStocks %}
+        <tr>
+            <td> {{ item["symbol"] }} </td>
+            <td> {{ item["name"] }} </td>
+            <td> {{ item["holding"] }} </td>
+            <td> {{ item["total"] }} </td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="table-primary" ><b>CASH</b></td>
+            <td> {{ cash }} </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="table-secondary" ><b>TOTAL</b></td>
+            <td> {{ total }} </td>
+        </tr>
+    </tbody>
+</table>
+
+{% endblock %}

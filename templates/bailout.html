@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Bail Me Out!!
+{% endblock %}
+{% block main %}
+<h1>Bail Me Out!!</h1>
+<form action="/bailout" method="POST">
+    <button id="bigbutton" value="bailout"><span></span>
+        <span></span>
+        <span></span>
+        <span></span>BAIL ME OUT</button>
+    <div>
+        <p>This button is only for those who REALLY need it (you have less than $1,000 in cash). It will give you a "loan" of $10,000.
+            <p>
+                <sub><sub>loans subject to immediate forgiveness if your net worth happens to be over $10,000 after delivery of the loan, offer not available for student loans</sub></sub>
+            </p>
+        </p>
+    </div>
+</form>
+{% endblock %}

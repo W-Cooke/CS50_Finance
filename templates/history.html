@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transaction History
+{% endblock %}
+{% block main %}
+<h1>Transaction History</h1>
+<table class="table table-hover" >
+    <thead class="table-primary" >
+        <th scope="col">Symbol</th>
+        <th scope="col">Name</th>
+        <th scope="col">Transaction Type</th>
+        <th scope="col">Amount Bought/Sold</th>
+        <th scope="col">Price at time of transaction</th>
+        <th scope="col">Date / Time</th>
+    </thead>
+    <tbody>
+        {% for item in transHistory %}
+        <tr>
+            <td> {{ item["symbol"] }} </td>
+            <td> {{ item["name"] }} </td>
+            <td> {{ item["transaction_type"] }} </td>
+            <td> {{ item["amount"] }} </td>
+            <td> {{ item["price_at_purchase"] }} </td>
+            <td> {{ item["time_stamp"] }} </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
