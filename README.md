@@ -4,7 +4,7 @@ This project was completed as part of Harvard's CS50 on EdX. Additional informat
 
 The project involved creating a website that allows users to engage in imaginary stock trading by creating an account, buying, and selling stocks.
 
-To implement the functionality required for this project, I developed the following features:
+To implement the functionality required for this project, I developed the following features, found in app.py:
 
 <ul>
 <li>Register: This feature enables users to register on the website by submitting their username and password. The information is then stored in a sqlite 3 database.</li>
